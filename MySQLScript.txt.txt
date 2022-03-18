@@ -1,0 +1,13 @@
+//Kapcsolattarto tábla létrehozása
+
+CREATE TABLE kapcsolattarto(
+    id INT NOT NULL AUTO_INCREMENT,
+    ceg_nev VARCHAR(100) COLLATE utf8_hungarian_ci NOT NULL,
+    kapcsolat_nev VARCHAR(100) COLLATE utf8_hungarian_ci NOT NULL,
+    telefonszam VARCHAR(50) COLLATE utf8_hungarian_ci NOT NULL,
+    email VARCHAR(100) COLLATE utf8_hungarian_ci,
+    titulus VARCHAR(100) COLLATE utf8_hungarian_ci,
+    PRIMARY KEY (id),
+    CONSTRAINT FK_partner_kapcsolattarto FOREIGN KEY (ceg_nev) REFERENCES partner(nev)
+);
+
