@@ -27,9 +27,11 @@ namespace Storage
             {
                 progressBar1.Value = 0;
                 timer1.Stop();                               
-                LoginForm log = new LoginForm();
+                LoginForm log = new LoginForm();                
                 log.Show();
+                log.Activate();
                 Hide();
+                
             }
         }
 

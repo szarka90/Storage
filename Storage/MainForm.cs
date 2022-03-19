@@ -63,5 +63,10 @@ namespace Storage
             UCProduct termekek = new UCProduct(user, increase);
             MainControlCLass.showControl(termekek, Content);
         }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

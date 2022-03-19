@@ -83,12 +83,12 @@ namespace Storage
             this.kilepesBtn.UseVisualStyleBackColor = true;
             this.kilepesBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
-            // beallitasokBtn
+            // settingsBtn
             // 
             this.settingsBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.settingsBtn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.settingsBtn.Location = new System.Drawing.Point(0, 610);
-            this.settingsBtn.Name = "beallitasokBtn";
+            this.settingsBtn.Name = "settingsBtn";
             this.settingsBtn.Size = new System.Drawing.Size(175, 50);
             this.settingsBtn.TabIndex = 9;
             this.settingsBtn.Text = "Beállítások";
@@ -172,6 +172,7 @@ namespace Storage
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

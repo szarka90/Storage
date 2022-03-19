@@ -35,6 +35,7 @@ namespace Storage
                     user = new Users((int?)DBConnect.Login(textBox1.Text, textBox2.Text).Id, (string)DBConnect.Login(textBox1.Text, textBox2.Text).Name, (TypeOfUsers)DBConnect.Login(textBox1.Text, textBox2.Text).TypeOfUsers);
                     MainForm main = new MainForm(user);
                     main.Show();
+                    main.Activate();
                     Hide();
                 }  
             }
@@ -42,6 +43,6 @@ namespace Storage
             {
                 throw new Exception("Sikertelen módosítás!", ex);
             }          
-        }
+        }       
     }
 }
