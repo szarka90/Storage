@@ -606,7 +606,7 @@ namespace Storage
                 command.Parameters.AddWithValue("@product_name", products.ProductName);
                 command.Parameters.AddWithValue("@product_number", products.ProductNumber);
                 command.Parameters.AddWithValue("@quantity", products.Quantity);
-                command.Parameters.AddWithValue("@vat", products.Afa);
+                command.Parameters.AddWithValue("@vat", products.Vat);
                 command.Parameters.AddWithValue("@netto_buy_price", products.NettoBuyPrice);
                 command.Parameters.AddWithValue("@brutto_buy_price", products.BruttoBuyPrice);
                 command.Parameters.AddWithValue("@netto_sell_price", products.NettoSellPrice);
@@ -637,7 +637,7 @@ namespace Storage
                 command.Parameters.AddWithValue("@product_name", products.ProductName);
                 command.Parameters.AddWithValue("@product_number", products.ProductNumber);
                 command.Parameters.AddWithValue("@quantity", products.Quantity);
-                command.Parameters.AddWithValue("@vat", products.Afa);
+                command.Parameters.AddWithValue("@vat", products.Vat);
                 command.Parameters.AddWithValue("@netto_buy_price", products.NettoBuyPrice);
                 command.Parameters.AddWithValue("@brutto_buy_price", products.BruttoBuyPrice);
                 command.Parameters.AddWithValue("@netto_sell_price", products.NettoSellPrice);
@@ -659,35 +659,7 @@ namespace Storage
                 connection.Close();
             }
         }
-        public static void StockReduction(List<Products> products)
-        {
-            try
-            {
-                connection.Open();
-                for (int i = 0; i < products.Count; i++)
-                {
-
-
-                    string querry = "UPDATE products SET stock = @stock Where id = @id;";
-                    MySqlCommand command = new MySqlCommand(querry, connection);
-
-                    command.Parameters.AddWithValue("@stock", products[i].Stock);
-                    command.Parameters.AddWithValue("@id", products[i].Id);
-                    command.ExecuteNonQuery();
-                }
-                connection.Close();
-            }
-            catch (Exception ex)
-            {
-
-                throw new Exception("Sikertelen módosítás!", ex);
-            }
-            finally
-            {
-                connection.Close();
-            }
-        }
-        public static void StockReduction2(Products products, int stockChanged)
+        public static void StockReduction(Products products, int stockChanged)
         {
             try
             {
@@ -892,7 +864,7 @@ namespace Storage
                     command2.Parameters.AddWithValue("@product_name", products[i].ProductName);
                     command2.Parameters.AddWithValue("@product_number", products[i].ProductNumber);
                     command2.Parameters.AddWithValue("@quantity", products[i].Quantity);
-                    command2.Parameters.AddWithValue("@vat", products[i].Afa);
+                    command2.Parameters.AddWithValue("@vat", products[i].Vat);
                     command2.Parameters.AddWithValue("@netto_buy_price", products[i].NettoBuyPrice);
                     command2.Parameters.AddWithValue("@brutto_buy_price", products[i].BruttoBuyPrice);
                     command2.Parameters.AddWithValue("@netto_sell_price", products[i].NettoSellPrice);
@@ -983,7 +955,7 @@ namespace Storage
                     command2.Parameters.AddWithValue("@product_name", products[i].ProductName);
                     command2.Parameters.AddWithValue("@product_number", products[i].ProductNumber);
                     command2.Parameters.AddWithValue("@quantity", products[i].Quantity);
-                    command2.Parameters.AddWithValue("@vat", products[i].Afa);
+                    command2.Parameters.AddWithValue("@vat", products[i].Vat);
                     command2.Parameters.AddWithValue("@netto_buy_price", products[i].NettoBuyPrice);
                     command2.Parameters.AddWithValue("@brutto_buy_price", products[i].BruttoBuyPrice);
                     command2.Parameters.AddWithValue("@netto_sell_price", products[i].NettoSellPrice);

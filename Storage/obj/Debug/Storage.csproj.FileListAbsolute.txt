@@ -47,4 +47,3 @@ C:\Users\Macintosh-PC\source\repos\Storage\Storage\obj\Debug\Storage.UCAddPartne
 C:\Users\Macintosh-PC\source\repos\Storage\Storage\obj\Debug\Storage.UCProduct.resources
 C:\Users\Macintosh-PC\source\repos\Storage\Storage\obj\Debug\Storage.UCAddProduct.resources
 C:\Users\Macintosh-PC\source\repos\Storage\Storage\obj\Debug\Storage.UCDatabaseConect.resources
-C:\Users\Macintosh-PC\source\repos\Storage\Storage\obj\Debug\Storage.csprojAssemblyReference.cache

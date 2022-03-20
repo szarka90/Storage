@@ -63,6 +63,16 @@ namespace Storage.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _CITYPNG_COM_Eye_View_Watching_White_Icon_HD_PNG___512x512 {
+            get {
+                object obj = ResourceManager.GetObject("[CITYPNG.COM]Eye View Watching White Icon HD PNG - 512x512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap architecture_g50e8fd5ae_1280 {
             get {
                 object obj = ResourceManager.GetObject("architecture-g50e8fd5ae_1280", resourceCulture);

@@ -43,6 +43,35 @@ namespace Storage
             {
                 throw new Exception("Sikertelen módosítás!", ex);
             }          
-        }       
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            textBox2.PasswordChar = '*';
+        }
+      
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (textBox2.PasswordChar == '*')
+            {
+                textBox2.PasswordChar = '\0';
+            }
+            else
+            {
+                textBox2.PasswordChar = '*';
+            }
+        }
+
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        {            
+            if (textBox2.PasswordChar == '*')
+            {
+                toolTip1.SetToolTip(pictureBox1, "Jelszó megjelenítése");
+            }
+            else
+            {
+                toolTip1.SetToolTip(pictureBox1, "Jelszó elrejtése");
+            }
+        }
     }
 }

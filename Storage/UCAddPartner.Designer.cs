@@ -71,20 +71,20 @@ namespace Storage
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Content = new System.Windows.Forms.Panel();
-            this.kapcsolattartoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nevDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefonszamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titulusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kapcsolattartoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Content = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.Content.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kapcsolattartoBindingSource)).BeginInit();
+            this.Content.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -274,7 +274,7 @@ namespace Storage
             this.groupBox3.Controls.Add(this.label15);
             this.groupBox3.Location = new System.Drawing.Point(3, 411);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(814, 87);
+            this.groupBox3.Size = new System.Drawing.Size(1164, 87);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "További adatok";
@@ -344,7 +344,7 @@ namespace Storage
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button2.Location = new System.Drawing.Point(661, 688);
+            this.button2.Location = new System.Drawing.Point(1011, 689);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 4;
@@ -355,7 +355,7 @@ namespace Storage
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(742, 688);
+            this.button3.Location = new System.Drawing.Point(1092, 689);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 5;
@@ -375,7 +375,7 @@ namespace Storage
             this.groupBox4.Controls.Add(this.label18);
             this.groupBox4.Location = new System.Drawing.Point(3, 82);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(814, 121);
+            this.groupBox4.Size = new System.Drawing.Size(1164, 121);
             this.groupBox4.TabIndex = 6;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Adatok";
@@ -446,7 +446,7 @@ namespace Storage
             this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox5.Size = new System.Drawing.Size(816, 154);
+            this.groupBox5.Size = new System.Drawing.Size(1166, 154);
             this.groupBox5.TabIndex = 7;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Kapcsolattartók";
@@ -493,21 +493,8 @@ namespace Storage
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 25;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(788, 78);
+            this.dataGridView1.Size = new System.Drawing.Size(1138, 78);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // Content
-            // 
-            this.Content.Controls.Add(this.groupBox5);
-            this.Content.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Content.Location = new System.Drawing.Point(0, 0);
-            this.Content.Name = "Content";
-            this.Content.Size = new System.Drawing.Size(825, 728);
-            this.Content.TabIndex = 8;
-            // 
-            // kapcsolattartoBindingSource
-            // 
-            this.kapcsolattartoBindingSource.DataSource = typeof(Storage.Contact);
             // 
             // nevDataGridViewTextBoxColumn
             // 
@@ -547,7 +534,20 @@ namespace Storage
             this.titulusDataGridViewTextBoxColumn.Name = "titulusDataGridViewTextBoxColumn";
             this.titulusDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // UCPartnerFelvitel
+            // kapcsolattartoBindingSource
+            // 
+            this.kapcsolattartoBindingSource.DataSource = typeof(Storage.Contact);
+            // 
+            // Content
+            // 
+            this.Content.Controls.Add(this.groupBox5);
+            this.Content.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Content.Location = new System.Drawing.Point(0, 0);
+            this.Content.Name = "Content";
+            this.Content.Size = new System.Drawing.Size(1175, 729);
+            this.Content.TabIndex = 8;
+            // 
+            // UCAddPartner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -559,8 +559,8 @@ namespace Storage
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Content);
-            this.Name = "UCPartnerFelvitel";
-            this.Size = new System.Drawing.Size(825, 728);
+            this.Name = "UCAddPartner";
+            this.Size = new System.Drawing.Size(1175, 729);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -571,8 +571,8 @@ namespace Storage
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.Content.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.kapcsolattartoBindingSource)).EndInit();
+            this.Content.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

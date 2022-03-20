@@ -146,7 +146,7 @@ namespace Storage
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button3.Location = new System.Drawing.Point(566, 609);
+            this.button3.Location = new System.Drawing.Point(909, 631);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 27;
@@ -158,7 +158,7 @@ namespace Storage
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button2.Location = new System.Drawing.Point(485, 609);
+            this.button2.Location = new System.Drawing.Point(828, 631);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 28;
@@ -176,7 +176,7 @@ namespace Storage
             this.Content.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Content.Location = new System.Drawing.Point(0, 0);
             this.Content.Name = "Content";
-            this.Content.Size = new System.Drawing.Size(644, 635);
+            this.Content.Size = new System.Drawing.Size(987, 657);
             this.Content.TabIndex = 29;
             // 
             // passwordCbx
@@ -224,7 +224,7 @@ namespace Storage
             this.Controls.Add(this.mainLabel);
             this.Controls.Add(this.Content);
             this.Name = "UCAddUser";
-            this.Size = new System.Drawing.Size(644, 635);
+            this.Size = new System.Drawing.Size(987, 657);
             this.Content.ResumeLayout(false);
             this.Content.PerformLayout();
             this.ResumeLayout(false);

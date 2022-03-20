@@ -35,7 +35,7 @@ namespace Storage
         string productName;
         string productNumber;
         Quantity quantity;
-        VAT afa;
+        VAT vat;
         double nettoBuyPrice;
         double bruttoBuyPrice;
         double nettoSellPrice;
@@ -44,12 +44,12 @@ namespace Storage
         int minStock;
         int orderDiscount;
 
-        public Products(string productName, string productNumber, Quantity quantity, VAT afa, double nettoBuyPrice, double bruttoBuyPrice, double nettoSellPrice, double bruttoSellPrice, int stock, int minStock)
+        public Products(string productName, string productNumber, Quantity quantity, VAT vat, double nettoBuyPrice, double bruttoBuyPrice, double nettoSellPrice, double bruttoSellPrice, int stock, int minStock)
         {
             ProductName = productName;
             ProductNumber = productNumber;
             Quantity = quantity;
-            Afa = afa;
+            Vat = vat;
             NettoBuyPrice = nettoBuyPrice;
             BruttoBuyPrice = bruttoBuyPrice;
             NettoSellPrice = nettoSellPrice;
@@ -58,13 +58,13 @@ namespace Storage
             MinStock = minStock;
         }
 
-        public Products(int? id, string productName, string productNumber, Quantity quantity, VAT afa, double nettoBuyPrice, double bruttoBuyPrice, double nettoSellPrice, double bruttoSellPrice, int stock, int minStock)
+        public Products(int? id, string productName, string productNumber, Quantity quantity, VAT vat, double nettoBuyPrice, double bruttoBuyPrice, double nettoSellPrice, double bruttoSellPrice, int stock, int minStock)
         {
             Id = id;
             ProductName = productName;
             ProductNumber = productNumber;
             Quantity = quantity;
-            Afa = afa;
+            Vat = vat;
             NettoBuyPrice = nettoBuyPrice;
             BruttoBuyPrice = bruttoBuyPrice;
             NettoSellPrice = nettoSellPrice;
@@ -72,7 +72,7 @@ namespace Storage
             Stock = stock;
             MinStock = minStock;
         }
-        public Products(int? id, string productName, int? orderId, int orderDiscount, string productNumber, Quantity quantity, VAT afa, double nettoBuyPrice, double bruttoBuyPrice, double nettoSellPrice, double bruttoSellPrice, int stock/*, int minStock*/)
+        public Products(int? id, string productName, int? orderId, int orderDiscount, string productNumber, Quantity quantity, VAT vat, double nettoBuyPrice, double bruttoBuyPrice, double nettoSellPrice, double bruttoSellPrice, int stock)
         {
             Id = id;
             OrderId = orderId;
@@ -80,13 +80,13 @@ namespace Storage
             ProductName = productName;
             ProductNumber = productNumber;
             Quantity = quantity;
-            Afa = afa;
+            Vat = vat;
             NettoBuyPrice = nettoBuyPrice;
             BruttoBuyPrice = bruttoBuyPrice;
             NettoSellPrice = nettoSellPrice;
             BruttoSellPrice = bruttoSellPrice;
             Stock = stock;
-            //MinStock = minStock;
+
         }
         public int? Id
         {
@@ -256,6 +256,6 @@ namespace Storage
 
 
         internal Quantity Quantity { get => quantity; set => quantity = value; }
-        internal VAT Afa { get => afa; set => afa = value; }
+        internal VAT Vat { get => vat; set => vat = value; }
     }
 }

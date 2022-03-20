@@ -272,6 +272,7 @@
     <EmbeddedResource Include="UCUsers.resx">
       <DependentUpon>UCUsers.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Kapcsolattarto.datasource" />
     <None Include="Properties\DataSources\Orders.datasource" />
@@ -298,6 +299,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\architecture-g50e8fd5ae_1280.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\[CITYPNG.COM]Eye View Watching White Icon HD PNG - 512x512.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

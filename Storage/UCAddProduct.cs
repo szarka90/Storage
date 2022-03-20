@@ -45,7 +45,7 @@ namespace Storage
             textBox1.Text = products.ProductName;
             textBox2.Text = products.ProductNumber;
             comboBox1.SelectedItem = products.Quantity;
-            comboBox2.SelectedIndex = (int)products.Afa;
+            comboBox2.SelectedIndex = (int)products.Vat;
             numericUpDown1.Value = (decimal)products.NettoBuyPrice;
             numericUpDown2.Value = (decimal)products.BruttoBuyPrice;
             numericUpDown3.Value = (decimal)products.NettoSellPrice;
@@ -90,7 +90,7 @@ namespace Storage
                     products.ProductName = textBox1.Text;
                     products.ProductNumber = textBox2.Text;
                     products.Quantity = (Quantity)comboBox1.SelectedItem;
-                    products.Afa = (VAT)comboBox2.SelectedIndex;
+                    products.Vat = (VAT)comboBox2.SelectedIndex;
                     products.NettoBuyPrice = (double)numericUpDown1.Value;
                     products.BruttoBuyPrice = (double)numericUpDown2.Value;
                     products.NettoSellPrice = (double)numericUpDown3.Value;
@@ -104,7 +104,7 @@ namespace Storage
                     products.ProductName = textBox1.Text;
                     products.ProductNumber = textBox2.Text;
                     products.Quantity = (Quantity)comboBox1.SelectedItem;
-                    products.Afa = (VAT)comboBox2.SelectedIndex;
+                    products.Vat = (VAT)comboBox2.SelectedIndex;
                     products.NettoBuyPrice = (double)numericUpDown1.Value;
                     products.BruttoBuyPrice = (double)numericUpDown2.Value;
                     products.NettoSellPrice = (double)numericUpDown3.Value;

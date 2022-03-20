@@ -131,7 +131,7 @@ namespace Storage
             ProductSelectForm product = new ProductSelectForm(orders, stock);
             if (product.ShowDialog() == DialogResult.OK)
             {
-                Products newProduct = new Products(product.product.Id, product.product.ProductName, product.product.ProductNumber, product.product.Quantity, product.product.Afa, product.product.NettoBuyPrice, product.product.BruttoBuyPrice, product.product.NettoSellPrice, product.product.BruttoSellPrice, product.stockChanged, product.product.MinStock);
+                Products newProduct = new Products(product.product.Id, product.product.ProductName, product.product.ProductNumber, product.product.Quantity, product.product.Vat, product.product.NettoBuyPrice, product.product.BruttoBuyPrice, product.product.NettoSellPrice, product.product.BruttoSellPrice, product.stockChanged, product.product.MinStock);
                 bool productIsExist = false;
                 if (orders == null)
                 {                
@@ -230,7 +230,7 @@ namespace Storage
                                 if (products[i].Id == actualStock[j].Id)
                                 {
                                     int stockChanged = (int)actualStock[j].Stock - (int)products[i].Stock;
-                                    DBConnect.StockReduction2(products[i], stockChanged);
+                                    DBConnect.StockReduction(products[i], stockChanged);
                                 }
                             }
                         }
@@ -253,7 +253,7 @@ namespace Storage
                                 if (deletedProducts[i].Id == actualStock[j].Id)
                                 {
                                     int stockChanged = (int)deletedProducts[i].Stock + (int)actualStock[j].Stock;
-                                    DBConnect.StockReduction2(actualStock[j], stockChanged);
+                                    DBConnect.StockReduction(actualStock[j], stockChanged);
                                 }
                             }
                         }
@@ -264,7 +264,7 @@ namespace Storage
                                 if (addproducts[i].Id == actualStock[j].Id)
                                 {
                                     int stockChanged = (int)actualStock[j].Stock - (int)addproducts[i].Stock;
-                                    DBConnect.StockReduction2(actualStock[j], stockChanged);
+                                    DBConnect.StockReduction(actualStock[j], stockChanged);
                                 }
                             }
                         }
@@ -388,13 +388,13 @@ namespace Storage
                                 if (oldStock < products[i].Stock)
                                 {
                                     int addStock = product1.stockChanged - oldStock;
-                                    Products changedProducts = new Products(product1.product.Id, product1.product.ProductName, product1.product.ProductNumber, product1.product.Quantity, product1.product.Afa, product1.product.NettoBuyPrice, product1.product.BruttoBuyPrice, product1.product.NettoSellPrice, product1.product.BruttoSellPrice, addStock, product1.product.MinStock);
+                                    Products changedProducts = new Products(product1.product.Id, product1.product.ProductName, product1.product.ProductNumber, product1.product.Quantity, product1.product.Vat, product1.product.NettoBuyPrice, product1.product.BruttoBuyPrice, product1.product.NettoSellPrice, product1.product.BruttoSellPrice, addStock, product1.product.MinStock);
                                     addproducts.Add(changedProducts);
                                 }
                                 else if (oldStock > products[i].Stock)
                                 {
                                     int addStock = oldStock - product1.stockChanged;
-                                    Products changedProducts = new Products(product1.product.Id, product1.product.ProductName, product1.product.ProductNumber, product1.product.Quantity, product1.product.Afa, product1.product.NettoBuyPrice, product1.product.BruttoBuyPrice, product1.product.NettoSellPrice, product1.product.BruttoSellPrice, addStock, product1.product.MinStock);
+                                    Products changedProducts = new Products(product1.product.Id, product1.product.ProductName, product1.product.ProductNumber, product1.product.Quantity, product1.product.Vat, product1.product.NettoBuyPrice, product1.product.BruttoBuyPrice, product1.product.NettoSellPrice, product1.product.BruttoSellPrice, addStock, product1.product.MinStock);
                                     deletedProducts.Add(changedProducts);
                                 }
                                 break;

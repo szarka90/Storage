@@ -38,7 +38,6 @@ namespace Storage
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Content = new System.Windows.Forms.Panel();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,10 +48,11 @@ namespace Storage
             this.stockDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.minStockDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Content = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.Content.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
+            this.Content.SuspendLayout();
             this.SuspendLayout();
             // 
             // label3
@@ -68,7 +68,7 @@ namespace Storage
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button3.Location = new System.Drawing.Point(15, 665);
+            this.button3.Location = new System.Drawing.Point(15, 666);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(355, 23);
             this.button3.TabIndex = 10;
@@ -79,7 +79,7 @@ namespace Storage
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button2.Location = new System.Drawing.Point(15, 636);
+            this.button2.Location = new System.Drawing.Point(15, 637);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(355, 23);
             this.button2.TabIndex = 9;
@@ -118,7 +118,7 @@ namespace Storage
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.Location = new System.Drawing.Point(15, 607);
+            this.button1.Location = new System.Drawing.Point(15, 608);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(355, 23);
             this.button1.TabIndex = 7;
@@ -149,20 +149,8 @@ namespace Storage
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 30;
-            this.dataGridView1.Size = new System.Drawing.Size(795, 375);
+            this.dataGridView1.Size = new System.Drawing.Size(1145, 375);
             this.dataGridView1.TabIndex = 6;
-            // 
-            // Content
-            // 
-            this.Content.Controls.Add(this.dataGridView1);
-            this.Content.Controls.Add(this.button3);
-            this.Content.Controls.Add(this.button2);
-            this.Content.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Content.Location = new System.Drawing.Point(0, 0);
-            this.Content.Margin = new System.Windows.Forms.Padding(2);
-            this.Content.Name = "Content";
-            this.Content.Size = new System.Drawing.Size(825, 728);
-            this.Content.TabIndex = 12;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -240,7 +228,19 @@ namespace Storage
             // 
             this.productsBindingSource.DataSource = typeof(Storage.Products);
             // 
-            // UCTermekek
+            // Content
+            // 
+            this.Content.Controls.Add(this.dataGridView1);
+            this.Content.Controls.Add(this.button3);
+            this.Content.Controls.Add(this.button2);
+            this.Content.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Content.Location = new System.Drawing.Point(0, 0);
+            this.Content.Margin = new System.Windows.Forms.Padding(2);
+            this.Content.Name = "Content";
+            this.Content.Size = new System.Drawing.Size(1175, 729);
+            this.Content.TabIndex = 12;
+            // 
+            // UCProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -248,13 +248,13 @@ namespace Storage
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Content);
-            this.Name = "UCTermekek";
-            this.Size = new System.Drawing.Size(825, 728);
+            this.Name = "UCProduct";
+            this.Size = new System.Drawing.Size(1175, 729);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.Content.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
+            this.Content.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

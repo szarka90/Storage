@@ -80,7 +80,7 @@ namespace Storage
                                 if (selectedOrder.Product[i].Id == stock[j].Id)
                                 {
                                     int stockchanged = (int)selectedOrder.Product[i].Stock + (int)stock[j].Stock;
-                                    DBConnect.StockReduction2(selectedOrder.Product[i], stockchanged);
+                                    DBConnect.StockReduction(selectedOrder.Product[i], stockchanged);
                                 }
                             }
                         }

@@ -31,29 +31,24 @@ namespace Storage
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.partnerClassBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.partnerClassBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nevDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adoszamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.szamlazasiOrszagDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.szamlazasiIranyitoszamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.szamlazasiVarosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.szamlazasiCimDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.szallitasiOrszagDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.szallitasiIranyitoszamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.szallitasiVarosDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.szalllitasiCimDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.weboldalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bankszamlaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.megjegyzesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TaxNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BillingCountry = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BillingPostcode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BillingCity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BillingAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Web = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BankAccount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.partnerClassBindingSource)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -67,24 +62,23 @@ namespace Storage
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
             this.nevDataGridViewTextBoxColumn,
-            this.adoszamDataGridViewTextBoxColumn,
-            this.szamlazasiOrszagDataGridViewTextBoxColumn,
-            this.szamlazasiIranyitoszamDataGridViewTextBoxColumn,
-            this.szamlazasiVarosDataGridViewTextBoxColumn,
-            this.szamlazasiCimDataGridViewTextBoxColumn,
-            this.szallitasiOrszagDataGridViewTextBoxColumn,
-            this.szallitasiIranyitoszamDataGridViewTextBoxColumn,
-            this.szallitasiVarosDataGridViewTextBoxColumn,
-            this.szalllitasiCimDataGridViewTextBoxColumn,
-            this.weboldalDataGridViewTextBoxColumn,
-            this.bankszamlaDataGridViewTextBoxColumn,
-            this.megjegyzesDataGridViewTextBoxColumn});
+            this.TaxNumber,
+            this.BillingCountry,
+            this.BillingPostcode,
+            this.BillingCity,
+            this.BillingAddress,
+            this.Web,
+            this.BankAccount});
             this.dataGridView1.DataSource = this.partnerClassBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 46);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(776, 216);
             this.dataGridView1.TabIndex = 1;
+            // 
+            // partnerClassBindingSource
+            // 
+            this.partnerClassBindingSource.DataSource = typeof(Storage.PartnerClass);
             // 
             // button6
             // 
@@ -137,17 +131,13 @@ namespace Storage
             this.textBox1.TabIndex = 1;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // partnerClassBindingSource
-            // 
-            this.partnerClassBindingSource.DataSource = typeof(Storage.PartnerClass);
-            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
             this.idDataGridViewTextBoxColumn.HeaderText = "ID";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Width = 50;
+            this.idDataGridViewTextBoxColumn.Width = 30;
             // 
             // nevDataGridViewTextBoxColumn
             // 
@@ -156,98 +146,55 @@ namespace Storage
             this.nevDataGridViewTextBoxColumn.Name = "nevDataGridViewTextBoxColumn";
             this.nevDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // adoszamDataGridViewTextBoxColumn
+            // TaxNumber
             // 
-            this.adoszamDataGridViewTextBoxColumn.DataPropertyName = "Adoszam";
-            this.adoszamDataGridViewTextBoxColumn.HeaderText = "Adószám";
-            this.adoszamDataGridViewTextBoxColumn.Name = "adoszamDataGridViewTextBoxColumn";
-            this.adoszamDataGridViewTextBoxColumn.ReadOnly = true;
+            this.TaxNumber.DataPropertyName = "TaxNumber";
+            this.TaxNumber.HeaderText = "Adószám";
+            this.TaxNumber.Name = "TaxNumber";
+            this.TaxNumber.ReadOnly = true;
             // 
-            // szamlazasiOrszagDataGridViewTextBoxColumn
+            // BillingCountry
             // 
-            this.szamlazasiOrszagDataGridViewTextBoxColumn.DataPropertyName = "SzamlazasiOrszag";
-            this.szamlazasiOrszagDataGridViewTextBoxColumn.HeaderText = "Számlázási Ország";
-            this.szamlazasiOrszagDataGridViewTextBoxColumn.Name = "szamlazasiOrszagDataGridViewTextBoxColumn";
-            this.szamlazasiOrszagDataGridViewTextBoxColumn.ReadOnly = true;
-            this.szamlazasiOrszagDataGridViewTextBoxColumn.Width = 120;
+            this.BillingCountry.DataPropertyName = "BillingCountry";
+            this.BillingCountry.HeaderText = "Számlázási Ország";
+            this.BillingCountry.Name = "BillingCountry";
+            this.BillingCountry.ReadOnly = true;
+            this.BillingCountry.Width = 130;
             // 
-            // szamlazasiIranyitoszamDataGridViewTextBoxColumn
+            // BillingPostcode
             // 
-            this.szamlazasiIranyitoszamDataGridViewTextBoxColumn.DataPropertyName = "SzamlazasiIranyitoszam";
-            this.szamlazasiIranyitoszamDataGridViewTextBoxColumn.HeaderText = "Számlázási Irányitószám";
-            this.szamlazasiIranyitoszamDataGridViewTextBoxColumn.Name = "szamlazasiIranyitoszamDataGridViewTextBoxColumn";
-            this.szamlazasiIranyitoszamDataGridViewTextBoxColumn.ReadOnly = true;
-            this.szamlazasiIranyitoszamDataGridViewTextBoxColumn.Width = 150;
+            this.BillingPostcode.DataPropertyName = "BillingPostcode";
+            this.BillingPostcode.HeaderText = "Irányítószám";
+            this.BillingPostcode.Name = "BillingPostcode";
+            this.BillingPostcode.ReadOnly = true;
             // 
-            // szamlazasiVarosDataGridViewTextBoxColumn
+            // BillingCity
             // 
-            this.szamlazasiVarosDataGridViewTextBoxColumn.DataPropertyName = "SzamlazasiVaros";
-            this.szamlazasiVarosDataGridViewTextBoxColumn.HeaderText = "Számlázási Város";
-            this.szamlazasiVarosDataGridViewTextBoxColumn.Name = "szamlazasiVarosDataGridViewTextBoxColumn";
-            this.szamlazasiVarosDataGridViewTextBoxColumn.ReadOnly = true;
-            this.szamlazasiVarosDataGridViewTextBoxColumn.Width = 120;
+            this.BillingCity.DataPropertyName = "BillingCity";
+            this.BillingCity.HeaderText = "Város";
+            this.BillingCity.Name = "BillingCity";
+            this.BillingCity.ReadOnly = true;
             // 
-            // szamlazasiCimDataGridViewTextBoxColumn
+            // BillingAddress
             // 
-            this.szamlazasiCimDataGridViewTextBoxColumn.DataPropertyName = "SzamlazasiCim";
-            this.szamlazasiCimDataGridViewTextBoxColumn.HeaderText = "Számlázási Cim";
-            this.szamlazasiCimDataGridViewTextBoxColumn.Name = "szamlazasiCimDataGridViewTextBoxColumn";
-            this.szamlazasiCimDataGridViewTextBoxColumn.ReadOnly = true;
-            this.szamlazasiCimDataGridViewTextBoxColumn.Width = 120;
+            this.BillingAddress.DataPropertyName = "BillingAddress";
+            this.BillingAddress.HeaderText = "Cím";
+            this.BillingAddress.Name = "BillingAddress";
+            this.BillingAddress.ReadOnly = true;
             // 
-            // szallitasiOrszagDataGridViewTextBoxColumn
+            // Web
             // 
-            this.szallitasiOrszagDataGridViewTextBoxColumn.DataPropertyName = "SzallitasiOrszag";
-            this.szallitasiOrszagDataGridViewTextBoxColumn.HeaderText = "Szállitási Ország";
-            this.szallitasiOrszagDataGridViewTextBoxColumn.Name = "szallitasiOrszagDataGridViewTextBoxColumn";
-            this.szallitasiOrszagDataGridViewTextBoxColumn.ReadOnly = true;
-            this.szallitasiOrszagDataGridViewTextBoxColumn.Width = 120;
+            this.Web.DataPropertyName = "Web";
+            this.Web.HeaderText = "Web";
+            this.Web.Name = "Web";
+            this.Web.ReadOnly = true;
             // 
-            // szallitasiIranyitoszamDataGridViewTextBoxColumn
+            // BankAccount
             // 
-            this.szallitasiIranyitoszamDataGridViewTextBoxColumn.DataPropertyName = "SzallitasiIranyitoszam";
-            this.szallitasiIranyitoszamDataGridViewTextBoxColumn.HeaderText = "Szállitási Irányitószám";
-            this.szallitasiIranyitoszamDataGridViewTextBoxColumn.Name = "szallitasiIranyitoszamDataGridViewTextBoxColumn";
-            this.szallitasiIranyitoszamDataGridViewTextBoxColumn.ReadOnly = true;
-            this.szallitasiIranyitoszamDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // szallitasiVarosDataGridViewTextBoxColumn
-            // 
-            this.szallitasiVarosDataGridViewTextBoxColumn.DataPropertyName = "SzallitasiVaros";
-            this.szallitasiVarosDataGridViewTextBoxColumn.HeaderText = "Szállitási Város";
-            this.szallitasiVarosDataGridViewTextBoxColumn.Name = "szallitasiVarosDataGridViewTextBoxColumn";
-            this.szallitasiVarosDataGridViewTextBoxColumn.ReadOnly = true;
-            this.szallitasiVarosDataGridViewTextBoxColumn.Width = 120;
-            // 
-            // szalllitasiCimDataGridViewTextBoxColumn
-            // 
-            this.szalllitasiCimDataGridViewTextBoxColumn.DataPropertyName = "SzalllitasiCim";
-            this.szalllitasiCimDataGridViewTextBoxColumn.HeaderText = "Szálllitási Cím";
-            this.szalllitasiCimDataGridViewTextBoxColumn.Name = "szalllitasiCimDataGridViewTextBoxColumn";
-            this.szalllitasiCimDataGridViewTextBoxColumn.ReadOnly = true;
-            this.szalllitasiCimDataGridViewTextBoxColumn.Width = 120;
-            // 
-            // weboldalDataGridViewTextBoxColumn
-            // 
-            this.weboldalDataGridViewTextBoxColumn.DataPropertyName = "Weboldal";
-            this.weboldalDataGridViewTextBoxColumn.HeaderText = "Weboldal";
-            this.weboldalDataGridViewTextBoxColumn.Name = "weboldalDataGridViewTextBoxColumn";
-            this.weboldalDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // bankszamlaDataGridViewTextBoxColumn
-            // 
-            this.bankszamlaDataGridViewTextBoxColumn.DataPropertyName = "Bankszamla";
-            this.bankszamlaDataGridViewTextBoxColumn.HeaderText = "Bankszámla";
-            this.bankszamlaDataGridViewTextBoxColumn.Name = "bankszamlaDataGridViewTextBoxColumn";
-            this.bankszamlaDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // megjegyzesDataGridViewTextBoxColumn
-            // 
-            this.megjegyzesDataGridViewTextBoxColumn.DataPropertyName = "Megjegyzes";
-            this.megjegyzesDataGridViewTextBoxColumn.HeaderText = "Megjegyzes";
-            this.megjegyzesDataGridViewTextBoxColumn.Name = "megjegyzesDataGridViewTextBoxColumn";
-            this.megjegyzesDataGridViewTextBoxColumn.ReadOnly = true;
-            this.megjegyzesDataGridViewTextBoxColumn.Visible = false;
+            this.BankAccount.DataPropertyName = "BankAccount";
+            this.BankAccount.HeaderText = "Bankszámla";
+            this.BankAccount.Name = "BankAccount";
+            this.BankAccount.ReadOnly = true;
             // 
             // PartnerSelectForm
             // 
@@ -263,9 +210,9 @@ namespace Storage
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Partner Kiválasztása";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.partnerClassBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.partnerClassBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -281,17 +228,12 @@ namespace Storage
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nevDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn adoszamDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn szamlazasiOrszagDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn szamlazasiIranyitoszamDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn szamlazasiVarosDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn szamlazasiCimDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn szallitasiOrszagDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn szallitasiIranyitoszamDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn szallitasiVarosDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn szalllitasiCimDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn weboldalDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bankszamlaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn megjegyzesDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TaxNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BillingCountry;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BillingPostcode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BillingCity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BillingAddress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Web;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BankAccount;
     }
 }
