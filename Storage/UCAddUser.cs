@@ -25,6 +25,7 @@ namespace Storage
             userNameTxb.Text = user.Username;
             typeOfUserCbx.SelectedItem = user.TypeOfUsers;
             emailTxb.Text = user.Email;
+            mainLabel.Text = "Felhasználó módosítása";
 
             passwordCbx.Visible = true;
             password1Txb.Enabled = false;

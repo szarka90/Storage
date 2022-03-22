@@ -87,6 +87,7 @@ namespace Storage
             label9.Text = bruttoTotalAmount(products).ToString() + " Ft";
             paymentCbx.SelectedIndex = (int)order.TermsOfPayment;
             changedOrder = true;
+            label3.Text = "Megrendelés módosítása";
 
             for (int i = 0; i < users.Count; i++)
             {
@@ -102,6 +103,7 @@ namespace Storage
             if (order.Innoviced == true)
             {
                 button7.Text = "Számla megtekintése";
+                label3.Text = "Számla megtekintése";
                 checkBox1.Checked = true;
                 groupBox1.Enabled = false;
                 groupBox2.Enabled = false;

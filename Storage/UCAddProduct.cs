@@ -52,6 +52,7 @@ namespace Storage
             numericUpDown4.Value = (decimal)products.BruttoSellPrice;
             numericUpDown5.Value = products.Stock;
             numericUpDown6.Value = products.MinStock;
+            label3.Text = "Termék módosítása";
 
             if (user.TypeOfUsers == TypeOfUsers.user)
             {
