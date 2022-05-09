@@ -40,6 +40,7 @@ namespace Storage
             textBox3.Text = kapcsolattarto.PhoneNumber;
             textBox4.Text = kapcsolattarto.Email;
             textBox5.Text = kapcsolattarto.Title;
+            label3.Text = "Kapcsolattartó módosítása";
         }
         private void button3_Click(object sender, EventArgs e)
         {

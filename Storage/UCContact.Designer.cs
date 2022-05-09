@@ -73,7 +73,7 @@ namespace Storage
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(8, 135);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(785, 181);
+            this.groupBox1.Size = new System.Drawing.Size(1135, 181);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Adatok";
@@ -119,7 +119,7 @@ namespace Storage
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(6, 139);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 13);
+            this.label7.Size = new System.Drawing.Size(30, 13);
             this.label7.TabIndex = 5;
             this.label7.Text = "Title:";
             // 
@@ -163,7 +163,7 @@ namespace Storage
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button2.Location = new System.Drawing.Point(657, 689);
+            this.button2.Location = new System.Drawing.Point(1007, 690);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 15;
@@ -175,7 +175,7 @@ namespace Storage
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button3.Location = new System.Drawing.Point(738, 689);
+            this.button3.Location = new System.Drawing.Point(1088, 690);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 16;
@@ -188,10 +188,10 @@ namespace Storage
             this.Content.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Content.Location = new System.Drawing.Point(0, 0);
             this.Content.Name = "Content";
-            this.Content.Size = new System.Drawing.Size(825, 728);
+            this.Content.Size = new System.Drawing.Size(1175, 729);
             this.Content.TabIndex = 17;
             // 
-            // UCKapcsolattarto
+            // UCContact
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -200,8 +200,8 @@ namespace Storage
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Content);
-            this.Name = "UCKapcsolattarto";
-            this.Size = new System.Drawing.Size(825, 728);
+            this.Name = "UCContact";
+            this.Size = new System.Drawing.Size(1175, 729);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
